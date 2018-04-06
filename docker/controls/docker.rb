@@ -13,21 +13,20 @@ repository = attribute('docker.repo', description: '')
 mapped_ports = attribute('docker.ports', description: '')
 run_cmd = attribute('docker.command', description: '')
 image = attribute('docker.image', description: '')
-sha256 = attribute('docker.sha256', description: '')
+sha = attribute('docker.sha256', description: '')
 container_id = attribute('docker.container.id', description: '')
-tag = attribute('docker.tag', description: '')
+tags = attribute('docker.tag', description: '')
 
 # check if docker exists
 only_if do
   command('docker').exist?
 end
 
-# Controls starts here.
+# # Docker container controls
 control "docker-01" do
   impact 1.0
   title "Basics verification for a container"
   desc "Verify that the container run, have the right ports mapped and was started properly"
-  tag 'docker'
   ref 'Some reference', url: 'http://link.to.some.documentation.com'
   describe docker_container(container_name) do
   it { should exist }
@@ -40,9 +39,8 @@ control "docker-02" do
   impact 1.0
   title "Global validation of a container"
   desc "will come later"
-  tag 'docker'
   ref 'Some reference', url: 'http://link.to.some.documentation.com'
-describe docker_container(container_name) do
+  describe docker_container(container_name) do
   it { should be_running }
   it { should exist }
   its('id') { should_not eq '' }
@@ -55,26 +53,23 @@ control "docker-03" do
   impact 1.0
   title "Container ID validation"
   desc "will come later"
-  tag 'docker'
   ref 'Some reference', url: 'http://link.to.some.documentation.com'
 describe docker_container(id:(container)) do
   it { should exist }
   it { should be_running }
  end
 end
-# # Docker image resource <<-- I NEED TO RE-WRITE THIS SECTION
-# control "docker-04" do
-#   impact 1.0
-#   title " Validation of a docker image"
-#   desc "will come later"
-#   tag 'docker'
-#   ref 'Some reference', url: 'http://link.to.some.documentation.com'
-#   describe docker_image(image) do
-#   it { should exist }
-#   its('id') { should_not eq '' }
-#   its('id') { should eq (sha256) }
-#   its('repo') { should eq (repository) }
-#   its('tag') { should eq (tag) }
-#  end
-# end
-#
+# # Docker image controls
+control "docker-04" do
+  impact 1.0
+  title " Validation of a docker image"
+  desc "will come later"
+  ref 'Some reference', url: 'http://link.to.some.documentation.com'
+  describe docker_image(image) do
+  it { should exist }
+  its('id') { should_not eq '' }
+  its('id') { should eq (sha) }
+  its('repo') { should eq (repository) }
+  its('tag') { should eq (tags) }
+ end
+end
