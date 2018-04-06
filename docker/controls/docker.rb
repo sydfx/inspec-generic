@@ -62,31 +62,19 @@ describe docker_container(id:(container)) do
   it { should be_running }
  end
 end
-# # Docker image resource
-control "docker-04" do
-  impact 1.0
-  title " Validation of a docker image"
-  desc "will come later"
-  tag 'docker'
-  ref 'Some reference', url: 'http://link.to.some.documentation.com'
-  describe docker_image(image) do
-  it { should exist }
-  its('id') { should_not eq '' }
-  its('id') { should eq (sha256) }
-  its('repo') { should eq (repository) }
-  its('tag') { should eq (tag) }
- end
-end
-
-# Can be used as an example if we want to exclude some old versions.
-control "os-ctl-01" do
-  impact 1.0
-  title "Validate that the image of Ubuntu 12 isn't present on the machine"
-  desc "Excluding old unused docker images"
-  ref 'Some reference', url: 'http://link.to.some.documentation.com'
-  tag data: "OS"
-  tag "Ubuntu"
-  describe docker_image('u12:latest') do
-    it { should_not exist }
- end
-end
+# # Docker image resource <<-- I NEED TO RE-WRITE THIS SECTION
+# control "docker-04" do
+#   impact 1.0
+#   title " Validation of a docker image"
+#   desc "will come later"
+#   tag 'docker'
+#   ref 'Some reference', url: 'http://link.to.some.documentation.com'
+#   describe docker_image(image) do
+#   it { should exist }
+#   its('id') { should_not eq '' }
+#   its('id') { should eq (sha256) }
+#   its('repo') { should eq (repository) }
+#   its('tag') { should eq (tag) }
+#  end
+# end
+#
