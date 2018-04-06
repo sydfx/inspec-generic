@@ -4,7 +4,7 @@
 title 'Docker tool suite'
 # inspec exec https://github.com/dev-sec/linux-baseline -t docker://someContainerID
 # This is to use the DevSec baseline to test a container.
-# This test doesn't work without the argument "--attrs ../files/attributes.yml"
+# This test doesn't work without the argument "--attrs ../files/docker-config.yml"
 
 # Attributes list
 container_name = attribute('docker.name', description: 'The name of the container')
