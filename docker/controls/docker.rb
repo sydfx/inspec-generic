@@ -1,5 +1,7 @@
 # encoding: utf-8
 # copyright: 2018, sydfx
+# Reference: https://www.inspec.io/docs/reference/resources/docker/
+# Reference: https://www.inspec.io/docs/reference/resources/docker_container/
 
 title 'Docker tool suite'
 # inspec exec https://github.com/dev-sec/linux-baseline -t docker://someContainerID
