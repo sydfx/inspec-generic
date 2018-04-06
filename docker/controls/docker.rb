@@ -7,15 +7,15 @@ title 'Docker tool suite'
 # This test doesn't work without the argument "--attrs ../files/docker-config.yml"
 
 # Attributes list
-container_name = attribute('docker.name', description: 'The name of the container')
-container = attribute('docker.container', description: 'The unique ID of the container')
-repository = attribute('docker.repo', description: 'The repository where the docker image is coming from')
-mapped_ports = attribute('docker.ports', description: 'The ports that the container should have mapped.')
-run_cmd = attribute('docker.command', description: 'The command that the container should have been run with')
-image = attribute('docker.image', description: 'Unique image ID')
-sha256 = attribute('docker.sha256', description: 'Layers of a docker image are now identified by a digest, which takes the form algorithm:hex')
-container_id = attribute('docker.container.id', description: 'Unique container ID')
-tag = attribute('docker.tag', description: 'Tag associated with the docker image')
+container_name = attribute('docker.name', description: '')
+container = attribute('docker.container', description: '')
+repository = attribute('docker.repo', description: '')
+mapped_ports = attribute('docker.ports', description: '')
+run_cmd = attribute('docker.command', description: '')
+image = attribute('docker.image', description: '')
+sha256 = attribute('docker.sha256', description: '')
+container_id = attribute('docker.container.id', description: '')
+tag = attribute('docker.tag', description: '')
 
 # check if docker exists
 only_if do
