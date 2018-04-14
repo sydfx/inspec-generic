@@ -4,7 +4,8 @@
 title 'Dynamic test - AWS Services; Monitoring tools'
 
 # Attributes here.
-something = attribute('define.something', description: '')
+content = inspec.profile.file("monitoring-config.JSON")
+params = JSON.parse(content)
 # body_content = attribute('body.content', description: 'Expected content in the body of the target')
 
 
