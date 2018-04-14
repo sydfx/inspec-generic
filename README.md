@@ -22,12 +22,10 @@ InSpec is an open-source run-time framework and rule language used to specify co
 
 ## Attributes
 
-We will use a yml attribute file to steer the configuration on the various tools to, sort of
-make them more dynamic tests, we can always hardcore for more specific needs. I will state a couple
-of example here:
+## Attributes
 
-  * `docker.ports: 1234`
-    define the expected ports.
+We will use a JSON attribute file to steer the configuration on the various tools to, sort of
+make the tests more dynamic, we can always hardcode for more specific needs.
 
 
 ## Usage
