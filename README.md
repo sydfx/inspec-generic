@@ -18,14 +18,11 @@ InSpec is an open-source run-time framework and rule language used to specify co
 - Debian 8
 - Ubuntu 16.04
 - CentOS 7
-- macOS
 
 ## Attributes
 
-## Attributes
-
-We will use a JSON attribute file to steer the configuration on the various tools to, sort of
-make the tests more dynamic, we can always hardcode for more specific needs.
+We will use a YAML attribute file to steer the configuration on the various tools to, sort of
+make the tests more dynamic and more flexible, we can always hardcode for more specific needs.
 
 
 ## Usage
