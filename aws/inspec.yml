@@ -1,0 +1,8 @@
+name: aws-test-suite
+title: InSpec AWS Test suite
+maintainer: sydfx
+copyright: sydfx
+copyright_email: admin@mtlinfographie.com
+license: Apache-2.0
+summary: a suite that will contain all of the InSpec AWS resources
+version: 0.1.0
