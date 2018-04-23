@@ -71,16 +71,17 @@ control 'monitoring-04' do
  end
 end
 # # List of objects variables for AWS Cloudwatch Alarm
-# webserver_id = attribute('ec2_instance.webserver', description: '')
-# ec2_ami_id = attribute('ec2_instance.webserver.ami', description: '')
-# ec2_type = attribute('ec2_instance.webserver.instance_type', description: '')
-# vpc_identifier = attribute('vpc.id', description: '')
+# webserver_id = attribute('metric', description: '')
+# webserver_id = attribute('metric.namespace', description: '')
 #
 # # List of objects variables for AWS Cloudwatch log metric filter
-# webserver_id = attribute('ec2_instance.webserver', description: '')
-# ec2_ami_id = attribute('ec2_instance.webserver.ami', description: '')
-# ec2_type = attribute('ec2_instance.webserver.instance_type', description: '')
-# vpc_identifier = attribute('vpc.id', description: '')
+# Filter attributes:
+#    filter_name, log_group_name, pattern
+# Properties:
+#    filter_name, log_group_name,metric_name, metric_namespace, pattern
+# webserver_id = attribute('filter.name', description: '')
+# ec2_ami_id = attribute('log.group.name', description: '')
+# ec2_type = attribute('pattern.id', description: '')
 #
 # # List of objects variables for AWS Config Recorder
 # webserver_id = attribute('ec2_instance.webserver', description: '')
