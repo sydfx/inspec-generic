@@ -46,7 +46,7 @@ end
 control 'monitoring-02' do
   impact 1.0
   title 'Cloudtrail - Delivery time is recent'
-  desc 'This test ensure the latest delivery time was recent'
+  desc 'This test ensure the latest delivery time was recent - value 0 day late'
   describe aws_cloudtrail_trail(trail_name) do
     its('delivered_logs_days_ago') { should eq 0 }
   end
