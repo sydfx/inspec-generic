@@ -1,1 +1,16 @@
 # Virtualization controls configurations
+
+
+## EBS Volume / Volumes values
+volume.type: gp2
+volume.id: vol-01a2345b678910cd11
+size: 32
+state: available
+availability.zone: us-east-1a
+iops: 100
+kms.key.id:
+snapshot.id: snap-f70deff0
+### Volumes values
+entries.count:
+volume.ids:
+volume.ids.count:
