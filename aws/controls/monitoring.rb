@@ -70,6 +70,10 @@ control 'monitoring-04' do
     its('entries.count') { should be <= (trails_count)}
  end
 end
+
+### I must come back to CLOUDWATCH properties..
+### Also add flow logs in this file
+
 # # List of objects variables for AWS Cloudwatch Alarm
 # webserver_id = attribute('metric', description: '')
 # webserver_id = attribute('metric.namespace', description: '')
