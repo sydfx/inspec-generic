@@ -13,11 +13,11 @@ title 'Dynamic test - AWS Services; Monitoring tools'
 # List of objects variables for AWS Cloudtrail  / Cloudtrail trails
 trail_name = attribute('trail.name', description: '')
 s3 = attribute('s3bucket.name', description: '')
-tr_arn_id = attribute('trail_arn.id', description: '')
-cw_logs_rarn = attribute('cloudwatch_logs_role.arn', description: '')
-cw_logs_garn = attribute('cloudwatch_logs_log_group.arn', description: '')
-kms_key = attribute('kms_key.id', description: '')
-region = attribute('home_region.id', description: '')
+tr_arn_id = attribute('trail.arn.id', description: '')
+cw_logs_rarn = attribute('cloudwatch.logs.role.arn', description: '')
+cw_logs_garn = attribute('cloudwatch.logs.log_group.arn', description: '')
+kms_key = attribute('kms.key.id', description: '')
+region = attribute('home.region.id', description: '')
 # Attributes for the Trails
 trails_count = attribute('cloudtrail.entries', description: '')
 trails_name = attribute('cloudtrail.name.list', description: '')

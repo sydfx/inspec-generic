@@ -4,10 +4,10 @@
 trail.name: some-name
 s3bucket.name: any-name-with-dashes
 trail_arn.id: arn:aws:cloudtrail:us-east-1:484747447281:trail/some-name
-cloudwatch_logs_role.arn: arn:aws:iam:::role/CloudTrail_CloudWatchLogs_Role
-cloudwatch_logs_log_group.arn: arn:aws:logs:us-east-1::log-group:test:*
-kms_key.id: key-arn
-home_region.id: us-east-1
+cloudwatch.logs.role.arn: arn:aws:iam:::role/CloudTrail_CloudWatchLogs_Role
+cloudwatch.logs.log_group.arn: arn:aws:logs:us-east-1::log-group:test:*
+kms.key.id: key-arn
+home.region.id: us-east-1
 ### Trails values
 cloudtrail.entries: 100
 cloudtrail.name.list:
